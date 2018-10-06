@@ -3,10 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WPFCardGameApp.Models.Decks;
 
 namespace WPFCardGameApp.Factories
 {
-    class MongolHeroFactory
+    class MongolHeroFactory : HeroFactory
     {
+        public override Deck CreateDeck()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

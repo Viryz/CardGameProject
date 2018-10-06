@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace WPFCardGameApp.Models.Decks
 {
-    class Deck
+    abstract class Deck
     {
+
     }
 }

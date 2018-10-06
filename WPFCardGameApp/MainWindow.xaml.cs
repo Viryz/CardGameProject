@@ -23,6 +23,12 @@ namespace WPFCardGameApp
         public MainWindow()
         {
             InitializeComponent();
+
+            using (CardGameDBContext db = new CardGameDBContext())
+            {
+                dataGrid.ItemsSource = db.Cards.ToList();
+                
+            }
         }
     }
 }
