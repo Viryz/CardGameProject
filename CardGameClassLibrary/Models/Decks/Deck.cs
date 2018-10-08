@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WPFCardGameApp.Models.Decks
+namespace CardGameClassLibrary.Models.Decks
 {
-    class MongolDeck
+    public abstract class Deck
     {
+
     }
 }

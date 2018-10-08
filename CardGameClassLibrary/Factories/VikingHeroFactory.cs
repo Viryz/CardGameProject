@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WPFCardGameApp.Models.Decks;
+using CardGameClassLibrary.Models.Decks;
 
-namespace WPFCardGameApp.Factories
+namespace CardGameClassLibrary.Factories
 {
-    class VikingHeroFactory : HeroFactory
+    public class VikingHeroFactory : HeroFactory
     {
         public override Deck CreateDeck()
         {

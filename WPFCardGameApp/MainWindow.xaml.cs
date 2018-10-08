@@ -24,10 +24,19 @@ namespace WPFCardGameApp
         {
             InitializeComponent();
 
-            using (CardGameDBContext db = new CardGameDBContext())
+            using (CardGameClassLibrary.CardGameDBContext db = new CardGameClassLibrary.CardGameDBContext())
             {
-                dataGrid.ItemsSource = db.Cards.ToList();
-                
+                CardGameClassLibrary.Models.Cards.ArcherCard card = new CardGameClassLibrary.Models.Cards.ArcherCard
+                {
+                    IdFraction = 1,
+                    Health = 1,
+                    Attack = 1,
+                    Cost = 1,
+                    Description = "1",
+                    Name = "1"
+                };
+                db.Cards.Add(card);
+                db.SaveChanges();
             }
         }
     }

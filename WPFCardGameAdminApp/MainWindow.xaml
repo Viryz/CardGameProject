@@ -1,0 +1,65 @@
+﻿<Window x:Class="WPFCardGameAdminApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFCardGameAdminApp"
+        
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Button x:Name="buttonAddFraction" Content="Add" Grid.Column="1" HorizontalAlignment="Left" Margin="266,55,0,0" VerticalAlignment="Top" Width="120" Click="buttonAddFraction_Click"/>
+        <TextBlock x:Name="textBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="266,6,0,0" TextWrapping="Wrap" Text="Fraction" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBoxFraction" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="266,27,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+
+        <Grid Grid.Column="0" Grid.RowSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.5*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            
+            <TextBlock Grid.Row="0" Grid.Column="0" Text="Health" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            <TextBox x:Name="textBoxHealth" Grid.Row="0" Grid.Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" KeyDown="TextBox_KeyDown" />
+            <TextBlock Grid.Row="1" Grid.Column="0" Text="Attack" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            <TextBox x:Name="textBoxAttack" Grid.Row="1" Grid.Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" KeyDown="TextBox_KeyDown" />
+            <TextBlock Grid.Row="2" Grid.Column="0" Text="Name" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            <TextBox x:Name="textBoxName" Grid.Row="2" Grid.Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+            <TextBlock Grid.Row="3" Grid.Column="0" Text="Description" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            <TextBox x:Name="textBoxDescription" Grid.Row="3" Grid.Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+            <TextBlock Grid.Row="4" Grid.Column="0" Text="Cost" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            <TextBox x:Name="textBoxCost" Grid.Row="4" Grid.Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" KeyDown="TextBox_KeyDown" />
+            <TextBlock Grid.Row="5" Grid.Column="0" Text="Fraction" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            <ComboBox x:Name="comboBoxFraction" Grid.Row="5" Grid.Column="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
+            <TextBlock Grid.Row="6" Grid.Column="0" Text="Type" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            <ComboBox x:Name="comboBoxType" Grid.Row="6" Grid.Column="1" SelectedIndex="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
+                <sys:String>Sworderman</sys:String>
+                <sys:String>Archer</sys:String>
+                <sys:String>Siege</sys:String>
+            </ComboBox>
+            <Button x:Name="buttonAddCard" Content="Add" Grid.Row="7" Grid.ColumnSpan="2" Click="buttonAddCard_Click"/>
+        </Grid>
+
+        <DataGrid x:Name="dataGrid" Grid.Row="1" Grid.Column="1"></DataGrid>
+        
+    </Grid>
+</Window>

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WPFCardGameApp.Factories
+namespace CardGameClassLibrary.Factories
 {
-    abstract class HeroFactory
+    public abstract class HeroFactory
     {
         public abstract Models.Decks.Deck CreateDeck();
     }

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WPFCardGameApp.Models
+namespace CardGameClassLibrary.Models
 {
-    class Hero
+    public class Hero
     {
         public Decks.Deck Deck { get; set; }
         public int Magic { get; set; }
