@@ -8,13 +8,14 @@ namespace CardGameClassLibrary.Models
 {
     public class Hero
     {
-        public Decks.Deck Deck { get; set; }
-        public int Magic { get; set; }
-        public List<Cards.Card> Board { get; set; }
+        public Deck Deck { get; set; }
+        public int Magic { get; set; } // Max: 7.
+        public List<Cards.Card> Board { get; set; } // Max: 7.
 
         public Hero(Factories.HeroFactory factory)
         {
-
+            Deck = factory.CreateDeck();
+            Board = new List<Cards.Card>();
         }
 
     }

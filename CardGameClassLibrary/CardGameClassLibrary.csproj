@@ -58,11 +58,7 @@
     <Compile Include="Models\Cards\Card.cs" />
     <Compile Include="Models\Cards\SiegeCard.cs" />
     <Compile Include="Models\Cards\SworderCard.cs" />
-    <Compile Include="Models\Decks\Deck.cs" />
-    <Compile Include="Models\Decks\EgyptDeck.cs" />
-    <Compile Include="Models\Decks\MongolDeck.cs" />
-    <Compile Include="Models\Decks\RomeDeck.cs" />
-    <Compile Include="Models\Decks\VikingDeck.cs" />
+    <Compile Include="Models\Deck.cs" />
     <Compile Include="Models\Fraction.cs" />
     <Compile Include="Models\Hero.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

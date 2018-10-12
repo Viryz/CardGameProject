@@ -6,8 +6,40 @@
         xmlns:local="clr-namespace:WPFCardGameApp"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    
     <Grid>
-        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Height="284" Margin="103,50,0,0" VerticalAlignment="Top" Width="526"/>
-
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.25*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <UniformGrid Grid.Row="1" Grid.ColumnSpan="7" Grid.RowSpan="2" Rows="2">
+            <UniformGrid Columns="7" x:Name="gridBoard1" ToolTip="grid" AllowDrop="True" DragEnter="stackPanelDeck1_DragEnter" Drop="stackPanelDeck1_Drop" Background="Red">
+                <Image Source="cat.jpg" MouseLeftButtonDown="Image_MouseLeftButtonDown" />
+                <Image Source="cat.jpg" MouseLeftButtonDown="Image_MouseLeftButtonDown" />
+                <Image Source="cat.jpg" MouseLeftButtonDown="Image_MouseLeftButtonDown" />
+                <Image Source="cat.jpg" MouseLeftButtonDown="Image_MouseLeftButtonDown" />
+                <Image Source="cat.jpg" MouseLeftButtonDown="Image_MouseLeftButtonDown" />
+                <Image Source="cat.jpg" MouseLeftButtonDown="Image_MouseLeftButtonDown" />
+            </UniformGrid>
+            <UniformGrid Columns="7" x:Name="gridBoard2" ToolTip="grid" AllowDrop="True" DragEnter="stackPanelDeck1_DragEnter" Drop="stackPanelDeck1_Drop" Background="Red">
+                <Image Source="cat.jpg" MouseLeftButtonDown="Image_MouseLeftButtonDown" />
+                <Image Source="cat.jpg" MouseLeftButtonDown="Image_MouseLeftButtonDown" />
+                <Image Source="cat.jpg" MouseLeftButtonDown="Image_MouseLeftButtonDown" />
+                <Image Source="cat.jpg" MouseLeftButtonDown="Image_MouseLeftButtonDown" />
+                <Image Source="cat.jpg" MouseLeftButtonDown="Image_MouseLeftButtonDown" />
+                <Image Source="cat.jpg" MouseLeftButtonDown="Image_MouseLeftButtonDown" />
+                <Image Source="cat.jpg" MouseLeftButtonDown="Image_MouseLeftButtonDown" />
+            </UniformGrid>
+        </UniformGrid>
+        <Button x:Name="button" Grid.Row="3" Grid.Column="0" Content="ok" Click="Button_Click" />
+        <UniformGrid Grid.Row="3" Grid.Column="1" Columns="7" ToolTip="grid" AllowDrop="True" DragEnter="stackPanelDeck1_DragEnter" Drop="stackPanelDeck1_Drop" Background="Red">
+            
+        </UniformGrid>
     </Grid>
 </Window>

@@ -8,6 +8,6 @@ namespace CardGameClassLibrary.Factories
 {
     public abstract class HeroFactory
     {
-        public abstract Models.Decks.Deck CreateDeck();
+        public abstract Models.Deck CreateDeck();
     }
 }
